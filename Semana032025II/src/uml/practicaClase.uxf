@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1.0">
+  <zoom_level>12</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>60</x>
+      <y>36</y>
+      <w>264</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>Usuario
+--
+- numeroSocio: int  
+- nombre: String
+- correo: String
+--
++ registrase() : void
++ consultaHistorial() : String
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>552</x>
+      <y>24</y>
+      <w>360</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>Prestamo
+--
+- fechaPrestamo : Date
+- fechaDevolucion : Date
+- estado: String
+- recursoDigital : RecursoDigital
+- usuario : Usuario
+--
++ iniciar() : void
++ finalizar() : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>84</x>
+      <y>288</y>
+      <w>264</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>VideosEducativos
+--
+- duracion : double
+- resolucion : String
+- formato : String
+- recursoDigital : RecursoDigital
+--
++ reproducirse() : void
++ detenerse() : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>312</x>
+      <y>576</y>
+      <w>276</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>RecursoDigital
+--
+- idUnico : int
+- titulo : String
+- fechaPublicacion : Date
+--
++ mostrarInformacion() : String
++ descargar() : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>588</x>
+      <y>300</y>
+      <w>348</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>LibroElectronico
+--
+- nombreAutor : String
+- cantidadPaginas : int
+- codigoISBN : int
+- recursoDigital : RecursoDigital
+--
++ leerFragmento() : String
++ calcularTamanio() : double</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>312</x>
+      <y>96</y>
+      <w>264</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1...*
+</panel_attributes>
+    <additional_attributes>200.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>252</x>
+      <y>456</y>
+      <w>132</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>552</x>
+      <y>468</y>
+      <w>156</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+</panel_attributes>
+    <additional_attributes>110.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>204</y>
+      <w>168</w>
+      <h>396</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+</panel_attributes>
+    <additional_attributes>120.0;10.0;10.0;310.0</additional_attributes>
+  </element>
+</diagram>
